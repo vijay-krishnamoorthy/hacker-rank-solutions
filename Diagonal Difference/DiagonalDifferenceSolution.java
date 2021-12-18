@@ -1,16 +1,10 @@
 import java.io.*;
-import java.math.*;
-import java.security.*;
-import java.text.*;
 import java.util.*;
-import java.util.concurrent.*;
-import java.util.function.*;
-import java.util.regex.*;
 import java.util.stream.*;
 import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
 
-class Result {
+class DiagonalDifferenceResult {
 
     /*
      * Complete the 'diagonalDifference' function below.
@@ -22,18 +16,17 @@ class Result {
     public static int diagonalDifference(List<List<Integer>> arr) {
     // Write your code here
     int m = arr.size();
-    int n = m;
     int lc = 0,rc=0;
     for(int i=0;i<arr.size();i++){
         lc +=arr.get(i).get(i);
-        rc+=arr.get(i).get(n-i-1);
+        rc+=arr.get(i).get(m-i-1);
     }
     return Math.abs(lc-rc);
     }
 
 }
 
-public class Solution {
+public class DiagonalDifferenceSolution {
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
@@ -54,7 +47,7 @@ public class Solution {
             }
         });
 
-        int result = Result.diagonalDifference(arr);
+        int result = DiagonalDifferenceResult.diagonalDifference(arr);
 
         bufferedWriter.write(String.valueOf(result));
         bufferedWriter.newLine();

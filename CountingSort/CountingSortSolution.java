@@ -1,16 +1,10 @@
 import java.io.*;
-import java.math.*;
-import java.security.*;
-import java.text.*;
 import java.util.*;
-import java.util.concurrent.*;
-import java.util.function.*;
-import java.util.regex.*;
 import java.util.stream.*;
 import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
 
-class Result {
+class CountingSortResult {
 
     /*
      * Complete the 'countingSort' function below.
@@ -21,9 +15,10 @@ class Result {
 
     public static List<Integer> countingSort(List<Integer> arr) {
     // Write your code here
-    List<Integer> res = new ArrayList<Integer>();
-    for(int a: arr) 
+    List<Integer> res = new ArrayList<>();
+    for(int i=0; i < 100; i++){
         res.add(0);
+    }
     for(int i : arr){
         try{
             int count = res.get(i);
@@ -37,7 +32,7 @@ class Result {
 
 }
 
-public class Solution {
+public class CountingSortSolution {
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
@@ -48,7 +43,7 @@ public class Solution {
             .map(Integer::parseInt)
             .collect(toList());
 
-        List<Integer> result = Result.countingSort(arr);
+        List<Integer> result = CountingSortResult.countingSort(arr);
         
         bufferedWriter.write(
             result.stream()
