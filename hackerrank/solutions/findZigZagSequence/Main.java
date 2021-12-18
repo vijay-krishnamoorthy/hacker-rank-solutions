@@ -1,4 +1,4 @@
-package hacker.rank.solutions.findZigZagSequence;
+package hackerrank.solutions.findZigZagSequence;
 
 import java.util.*;
 import java.lang.*;

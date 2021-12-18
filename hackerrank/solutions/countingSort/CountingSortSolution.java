@@ -1,4 +1,4 @@
-package hacker.rank.solutions.countingSort;
+package hackerrank.solutions.countingSort;
 
 import java.io.*;
 import java.util.*;

@@ -1,4 +1,4 @@
-package hacker.rank.solutions.diagonaldifference;
+package hackerrank.solutions.diagonaldifference;
 
 import java.io.*;
 import java.util.*;
