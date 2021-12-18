@@ -1,3 +1,5 @@
+package hacker.rank.solutions.diagonaldifference;
+
 import java.io.*;
 import java.util.*;
 import java.util.stream.*;

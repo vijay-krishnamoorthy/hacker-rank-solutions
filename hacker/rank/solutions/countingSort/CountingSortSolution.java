@@ -1,3 +1,5 @@
+package hacker.rank.solutions.countingSort;
+
 import java.io.*;
 import java.util.*;
 import java.util.stream.*;
